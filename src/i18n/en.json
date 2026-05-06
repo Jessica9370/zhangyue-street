@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "home": "Today",
+    "archive": "Archive",
+    "about": "About"
+  },
+  "site": {
+    "name": "Beijing Street View Daily",
+    "desc": "A daily glimpse of Beijing's urban pulse",
+    "footer": "Frame by frame, capturing Beijing"
+  },
+  "home": {
+    "recent": "Recent Photos",
+    "viewAll": "View All →",
+    "viewDetail": "View Details →",
+    "good": "Good",
+    "fair": "Fair",
+    "light": "Lightly Polluted"
+  },
+  "archive": {
+    "title": "Archive",
+    "desc": "Browse all Beijing street view records",
+    "district": "[District]",
+    "season": "[Season]",
+    "clear": "[Clear]",
+    "moreDistricts": "More",
+    "gridView": "▦ Grid",
+    "timelineView": "≡ Timeline",
+    "records": "records",
+    "empty": "No matching records found"
+  },
+  "entry": {
+    "date": "Date",
+    "year": "Year",
+    "weather": "Weather",
+    "location": "Location",
+    "season": "Season",
+    "camera": "Camera",
+    "settings": "Settings",
+    "aqi": "AQI",
+    "coordinates": "Coordinates",
+    "notes": "# Notes",
+    "related": "Related Photos",
+    "unknownCamera": "Unknown",
+    "fullscreen": "▣ Fullscreen"
+  },
+  "gallery": {
+    "close": "Close",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "season": {
+    "spring": "Spring",
+    "summer": "Summer",
+    "autumn": "Autumn",
+    "winter": "Winter"
+  },
+  "weather": {
+    "sunny": "Sunny",
+    "cloudy": "Cloudy",
+    "overcast": "Overcast",
+    "rainy": "Rainy",
+    "snowy": "Snowy",
+    "foggy": "Foggy",
+    "windy": "Windy",
+    "hazy": "Hazy"
+  },
+  "weekday": ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+  "contact": {
+    "title": "✉️ Leave a Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "messagePlaceholder": "What would you like to say...",
+    "send": "Send",
+    "sending": "Sending…",
+    "success": "✓ Sent",
+    "successDesc": "Thanks for your message, I'll get back to you soon",
+    "writeAnother": "Write another",
+    "error": "Failed to send, please try again later",
+    "hint": "Tip: Messages go to Feishu bitable. Set FEISHU_CONTACT_TABLE_ID in .env.local"
+  },
+  "about": {
+    "originTitle": "About This Project",
+    "originDesc": "One frame per day, capturing the pulse of Beijing's urban landscape. From hutongs to CBD, from sunrise to sunset, the lens captures the subtle changes happening every day in this city.",
+    "designTitle": "Design Philosophy",
+    "designDesc": "The site adopts a cyberpunk visual style, with neon purple, circuit blue, and amber orange as the primary palette. CRT scanlines and glitch effects create an aesthetic contrast between futuristic tech and old Beijing's everyday life. Each street photo feels like a fragment of memory from the future.",
+    "equipmentTitle": "Equipment",
+    "equipmentDesc": "Shot primarily on Xiaomi13, with minimal post-processing to preserve the authentic feel of each scene."
+  },
+  "notFound": "Not Found",
+  "districts": {
+    "东城区": "Dongcheng District",
+    "西城区": "Xicheng District",
+    "朝阳区": "Chaoyang District",
+    "海淀区": "Haidian District",
+    "丰台区": "Fengtai District",
+    "石景山区": "Shijingshan District",
+    "通州区": "Tongzhou District",
+    "大兴区": "Daxing District",
+    "房山区": "Fangshan District",
+    "昌平区": "Changping District",
+    "平谷区": "Pinggu District",
+    "怀柔区": "Huairou District",
+    "密云区": "Miyun District",
+    "延庆区": "Yanqing District",
+    "顺义区": "Shunyi District",
+    "门头沟区": "Mentougou District"
+  }
+}

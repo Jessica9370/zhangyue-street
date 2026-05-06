@@ -1,0 +1,236 @@
+/* ── Fonts (must be first) ── */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap");
+
+@import "tailwindcss";
+
+/* ── Cyberpunk Theme Tokens ── */
+@theme inline {
+  --color-bg-primary: #0a0a14;
+  --color-bg-card: #12122a;
+  --color-bg-card-hover: #1a1a3a;
+  --color-bg-elevated: #1e1e3a;
+
+  --color-cyber-purple: #b026ff;
+  --color-cyber-purple-dark: #7b1fa2;
+  --color-cyber-blue: #00d4ff;
+  --color-cyber-blue-dark: #0099cc;
+  --color-cyber-amber: #ff6a00;
+  --color-cyber-amber-light: #ff8c00;
+  --color-cyber-cyan: #00ffc8;
+  --color-cyber-red: #ff0040;
+  --color-cyber-pink: #ff00aa;
+
+  --color-gray-900: #0a0a14;
+  --color-gray-800: #12122a;
+  --color-gray-700: #1a1a2e;
+  --color-gray-600: #2a2a3d;
+  --color-gray-500: #686880;
+  --color-gray-400: #8888a0;
+  --color-gray-300: #a8a8be;
+  --color-gray-200: #c8c8d8;
+  --color-gray-100: #e0e0f0;
+
+  --font-display: "Orbitron", "Rajdhani", "sans-serif";
+  --font-body: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "sans-serif";
+  --font-mono: "JetBrains Mono", "Source Code Pro", "monospace";
+
+  --animate-scanline: scanline 8s linear infinite;
+  --animate-glitch-1: glitch-1 0.3s infinite linear alternate-reverse;
+  --animate-glitch-2: glitch-2 0.3s infinite linear alternate-reverse;
+  --animate-pulse-neon: pulse-neon 2s ease-in-out infinite;
+  --animate-radar-pulse: radar-pulse 2s ease-out infinite;
+  --animate-flicker: flicker 0.15s infinite;
+  --animate-grid-scroll: grid-scroll 20s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+/* ── Base Styles ── */
+:root {
+  --scanline-color: rgba(0, 0, 0, 0.06);
+  --scanline-size: 2px;
+  --noise-opacity: 0.015;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-gray-100);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* ── CRT Scanline Overlay ── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.06) 2px,
+    rgba(0, 0, 0, 0.06) 4px
+  );
+}
+
+/* ── CRT Noise Texture ── */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9997;
+  pointer-events: none;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-cyber-blue-dark);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-cyber-blue);
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(0, 212, 255, 0.3);
+  color: #fff;
+}
+
+/* ── Animations ── */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+@keyframes glitch-1 {
+  0% { clip-path: inset(20px 0 40px 0); }
+  20% { clip-path: inset(60px 0 80px 0); }
+  40% { clip-path: inset(10px 0 30px 0); }
+  60% { clip-path: inset(40px 0 60px 0); }
+  80% { clip-path: inset(80px 0 20px 0); }
+  100% { clip-path: inset(30px 0 50px 0); }
+}
+@keyframes glitch-2 {
+  0% { clip-path: inset(40px 0 20px 0); }
+  20% { clip-path: inset(80px 0 60px 0); }
+  40% { clip-path: inset(30px 0 10px 0); }
+  60% { clip-path: inset(50px 0 70px 0); }
+  80% { clip-path: inset(10px 0 40px 0); }
+  100% { clip-path: inset(60px 0 30px 0); }
+}
+@keyframes pulse-neon {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+@keyframes radar-pulse {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(3); opacity: 0; }
+}
+@keyframes flicker {
+  0% { opacity: 0.97; }
+  5% { opacity: 0.95; }
+  10% { opacity: 0.98; }
+  15% { opacity: 0.95; }
+  20% { opacity: 1; }
+  50% { opacity: 0.97; }
+  80% { opacity: 0.99; }
+  90% { opacity: 0.96; }
+  100% { opacity: 0.98; }
+}
+@keyframes grid-scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(50px); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ── Utility Classes ── */
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.neon-glow-purple {
+  box-shadow: 0 0 10px rgba(176, 38, 255, 0.3), 0 0 20px rgba(176, 38, 255, 0.15);
+}
+.neon-glow-blue {
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3), 0 0 20px rgba(0, 212, 255, 0.15);
+}
+.neon-glow-amber {
+  box-shadow: 0 0 10px rgba(255, 106, 0, 0.3), 0 0 20px rgba(255, 106, 0, 0.15);
+}
+.neon-glow-cyan {
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.3), 0 0 20px rgba(0, 255, 200, 0.15);
+}
+
+.cyberpunk-grid {
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 7px rgba(0, 212, 255, 0.6), 0 0 20px rgba(0, 212, 255, 0.3);
+}
+.text-glow-purple {
+  text-shadow: 0 0 7px rgba(176, 38, 255, 0.6), 0 0 20px rgba(176, 38, 255, 0.3);
+}
+.text-glow-amber {
+  text-shadow: 0 0 7px rgba(255, 106, 0, 0.6), 0 0 20px rgba(255, 106, 0, 0.3);
+}
+
+/* ── Image Download Protection ── */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+
+/* ── Mobile Responsive Improvements ── */
+@media (max-width: 640px) {
+  .cyberpunk-grid {
+    background-size: 30px 30px;
+  }
+}
+
+/* Touch-friendly map on mobile */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  touch-action: manipulation;
+  z-index: 1;
+}
+
+/* Prevent long-press context menu on mobile */
+* {
+  -webkit-touch-callout: none;
+}
+
+/* Light map tiles - warm tone */
+.map-tiles-light {
+  filter: brightness(1.05) saturate(0.9) sepia(0.15);
+}

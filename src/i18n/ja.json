@@ -1,0 +1,109 @@
+{
+  "nav": {
+    "home": "今日の街並み",
+    "archive": "過去の記事",
+    "about": "概要"
+  },
+  "site": {
+    "name": "北京街並み日記",
+    "desc": "毎日一枚、北京の街を記録する",
+    "footer": "毎日一枚、北京の鼓動を切り取る"
+  },
+  "home": {
+    "recent": "最近の街並み",
+    "viewAll": "すべて見る →",
+    "viewDetail": "詳細を見る →",
+    "good": "良好",
+    "fair": "普通",
+    "light": "軽度汚染"
+  },
+  "archive": {
+    "title": "過去の記事",
+    "desc": "北京の街並み記録をすべて見る",
+    "district": "[エリア]",
+    "season": "[季節]",
+    "clear": "[クリア]",
+    "moreDistricts": "その他",
+    "gridView": "▦ グリッド",
+    "timelineView": "≡ タイムライン",
+    "records": "件",
+    "empty": "該当する記録がありません"
+  },
+  "entry": {
+    "date": "日付",
+    "year": "年",
+    "weather": "天気",
+    "location": "場所",
+    "season": "季節",
+    "camera": "カメラ",
+    "settings": "設定",
+    "aqi": "大気質",
+    "coordinates": "座標",
+    "notes": "# 撮影ノート",
+    "related": "関連写真",
+    "unknownCamera": "不明",
+    "fullscreen": "▣ 全画面"
+  },
+  "gallery": {
+    "close": "閉じる",
+    "prev": "前へ",
+    "next": "次へ"
+  },
+  "season": {
+    "spring": "春",
+    "summer": "夏",
+    "autumn": "秋",
+    "winter": "冬"
+  },
+  "weather": {
+    "sunny": "晴れ",
+    "cloudy": "曇り",
+    "overcast": "曇天",
+    "rainy": "雨",
+    "snowy": "雪",
+    "foggy": "霧",
+    "windy": "風",
+    "hazy": "もや"
+  },
+  "weekday": ["日","月","火","水","木","金","土"],
+  "contact": {
+    "title": "✉️ メッセージ",
+    "namePlaceholder": "お名前",
+    "emailPlaceholder": "メールアドレス",
+    "messagePlaceholder": "メッセージをどうぞ…",
+    "send": "送信",
+    "sending": "送信中…",
+    "success": "✓ 送信完了",
+    "successDesc": "メッセージありがとうございます。折り返しご連絡いたします",
+    "writeAnother": "もう一件書く",
+    "error": "送信に失敗しました。後でもう一度お試しください",
+    "hint": "ヒント：メッセージは飛書多维テーブルに保存されます。.env.local で FEISHU_CONTACT_TABLE_ID を設定してください"
+  },
+  "about": {
+    "originTitle": "プロジェクトについて",
+    "originDesc": "毎日一枚、北京の街並みを記録。胡同からCBDまで、日の出から日没まで、この街で日々起こる微細な変化をレンズで捉えます。",
+    "designTitle": "デザインコンセプト",
+    "designDesc": "サイバーパンクのビジュアルスタイルを採用。ネオンパープル、サーキットブルー、アンバーオレンジを基調とし、CRTスキャンラインやグリッチエフェクトで、テクノロジーと老北京の情緒が共存する反差の美学を表現しています。",
+    "equipmentTitle": "撮影機材",
+    "equipmentDesc": "主にXiaomi13で撮影。現像は最小限に抑え、シーンのリアルな質感を重視しています。"
+  },
+  "notFound": "見つかりません",
+  "districts": {
+    "东城区": "東城区",
+    "西城区": "西城区",
+    "朝阳区": "朝陽区",
+    "海淀区": "海淀区",
+    "丰台区": "豊台区",
+    "石景山区": "石景山区",
+    "通州区": "通州区",
+    "大兴区": "大興区",
+    "房山区": "房山区",
+    "昌平区": "昌平区",
+    "平谷区": "平谷区",
+    "怀柔区": "懐柔区",
+    "密云区": "密雲区",
+    "延庆区": "延慶区",
+    "顺义区": "順義区",
+    "门头沟区": "門頭溝区"
+  }
+}
